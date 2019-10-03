@@ -78,7 +78,7 @@ import QuestionShowPage from './components/QuestionShowPage'
 import QuestionIndexPage from './components/QuestionIndexPage';
 import "./App.css";
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 
 function App() {
   return (

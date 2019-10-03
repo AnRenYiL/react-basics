@@ -3,13 +3,15 @@ import React, { Component } from 'react';
 import '../styles/QuestionIndexPage.css';
 import questionData from './questionData';
 import NewQuestionForm from './NewQuestionForm';
+import CurrentDateTime from './CurrentDateTime';
 // import DeleteButton from './DeleteButton';
 
 class QuestionIndexPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            questions: [...questionData]
+            questions: [...questionData],
+            showTime: true
         };
         this.createQuestion = this.createQuestion.bind(this);
     }
@@ -54,6 +56,7 @@ class QuestionIndexPage extends Component {
     render() {
         return (
             <main className="QuestionIndexPage">
+                {this.state.showTime && <CurrentDateTime />}
                 <h1>Questions</h1>
                 <NewQuestionForm onCreateQuestion={this.createQuestion} />
                 <ul>
